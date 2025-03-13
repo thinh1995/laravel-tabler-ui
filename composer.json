@@ -1,5 +1,5 @@
 {
-  "name": "lucifer/laravel-tabler-ui",
+  "name": "lucifer293/laravel-tabler-ui",
   "description": "Tabler UI Blade for Laravel",
   "autoload": {
     "psr-4": {
