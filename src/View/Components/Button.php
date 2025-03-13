@@ -12,7 +12,7 @@ use Lucifer\LaravelTablerUi\Enums\Theme;
 class Button extends Component
 {
 
-    const VALID_STYLES = ['outline', 'ghost'];
+    const VALID_STYLISHES = ['outline', 'ghost'];
 
     public function __construct(
         public bool $anchor = false,
@@ -20,7 +20,7 @@ class Button extends Component
         public string|null $theme = null,
         public bool $square = false,
         public bool $pill = false,
-        public string|null $style = null,
+        public string|null $stylish = null,
         public string|null $size = null,
         public array|string|null $classes = null,
     ) {
@@ -34,8 +34,8 @@ class Button extends Component
         $this->classes = ['btn'];
 
         if (in_array($this->theme, Theme::values())) {
-            if (in_array($this->style, self::VALID_STYLES)) {
-                $this->classes[] = 'btn-' . $this->style . '-' . $this->theme;
+            if (in_array($this->stylish, self::VALID_STYLISHES)) {
+                $this->classes[] = 'btn-' . $this->stylish . '-' . $this->theme;
             } else {
                 $this->classes[] = 'btn-' . $this->theme;
             }
