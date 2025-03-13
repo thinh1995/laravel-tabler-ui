@@ -20,8 +20,7 @@ class Input extends Component
     public function __construct(
         public string|null $id = null,
         public string $stylish = 'normal',
-        public string $extraType = 'icon',
-        public string $extraAlign = 'left',
+        public bool $extraFlat = false
     ) {
         if (is_null($this->id)) {
             $this->id = 'input_' . Str::random(8);
@@ -41,16 +40,6 @@ class Input extends Component
                 $this->classes[] = 'form-control-flush';
         }
 
-        if ($this->isFlatGroupExtra()) {
-            if ($this->isLeftExtra()) {
-                $this->classes[] = 'ps-0';
-            }
-            if ($this->isRightExtra()) {
-                $this->classes[] = 'pe-0';
-                $this->classes[] = 'text-end';
-            }
-        }
-
         return view(config('tabler.namespace') . '::components.input');
     }
 
@@ -67,35 +56,5 @@ class Input extends Component
     public function isFloat(): bool
     {
         return strtolower($this->stylish) === 'float';
-    }
-
-    public function isIconExtra(): bool
-    {
-        return strtolower($this->extraType) === 'icon';
-    }
-
-    public function isCommonGroup(): bool
-    {
-        return in_array(strtolower($this->extraType), ['flat-group', 'group']);
-    }
-
-    public function isGroupExtra(): bool
-    {
-        return strtolower($this->extraType) === 'group';
-    }
-
-    public function isFlatGroupExtra(): bool
-    {
-        return strtolower($this->extraType) === 'flat-group';
-    }
-
-    public function isLeftExtra(): bool
-    {
-        return strtolower($this->extraAlign) === 'left';
-    }
-
-    public function isRightExtra(): bool
-    {
-        return strtolower($this->extraAlign) === 'right';
     }
 }
