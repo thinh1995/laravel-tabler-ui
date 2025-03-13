@@ -17,7 +17,7 @@
         @php
             $classes[] = 'is-invalid';
             $invalid = true;
-            $hasExtra = $extraLeft || $extraRight;
+            $hasExtra = !is_null($extraLeft) || !is_null($extraRight);
         @endphp
     @enderror
 
