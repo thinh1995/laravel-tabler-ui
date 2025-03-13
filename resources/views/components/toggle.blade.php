@@ -7,6 +7,7 @@
 ])
 
 <label class="form-check form-switch @if($inline) form-check-inline @endif">
+  <input name="{{ $name }}" type="hidden" value="0">
   <input {{ $attributes->merge(['class' => 'form-check-input']) }} type="checkbox" id="{{ $id }}" name="{{ $name }}"
          value="{{ $value }}">
   @if(!is_null($label))
