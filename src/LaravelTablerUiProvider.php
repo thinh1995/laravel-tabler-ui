@@ -62,7 +62,7 @@ class LaravelTablerUiProvider extends ServiceProvider
 
         Blade::directive('datatable', function (string $type) {
             switch (strtolower($type)) {
-                case 'css':
+                case "'css'":
                     $fileNames = [
                         'dataTables.bootstrap5.min.css',
                         'buttons.bootstrap5.min.css',
@@ -79,7 +79,7 @@ class LaravelTablerUiProvider extends ServiceProvider
                         $result  .= '<link rel="stylesheet" href="' . $fileDir . '"/>' . PHP_EOL;
                     }
                     break;
-                case 'js':
+                case "'js'":
                     $fileNames = [
                         'dataTables.min.js',
                         'dataTables.bootstrap5.min.js',
