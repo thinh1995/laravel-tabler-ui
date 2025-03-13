@@ -19,8 +19,7 @@ class Input extends Component
      */
     public function __construct(
         public string|null $id = null,
-        public string $stylish = 'normal',
-        public bool $extraFlat = false
+        public string $stylish = 'normal'
     ) {
         if (is_null($this->id)) {
             $this->id = 'input_' . Str::random(8);

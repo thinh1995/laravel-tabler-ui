@@ -6,18 +6,20 @@
     'hint' => null,
     'maxlength' => null,
     'help' => null,
-    'hasExtra' => false,
     'flatExtra' => false,
     'extraLeft' => null,
     'extraRight' => null,
 ])
+
+@php
+  $hasExtra = !is_null($extraLeft) || !is_null($extraRight);
+@endphp
 
 <div class="mb-3">
     @error($name)
         @php
             $classes[] = 'is-invalid';
             $invalid = true;
-            $hasExtra = !is_null($extraLeft) || !is_null($extraRight);
         @endphp
     @enderror
 
