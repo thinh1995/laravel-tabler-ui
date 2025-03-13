@@ -31,7 +31,7 @@
         @if(is_array($option) && !empty($option))
           <option
             value="{{ $option['value'] ?? $option[0] }}"
-            @selected(in_array(($option['value'] ?? $option[0]), old(str_replace('[]', '', $name), $selected)))>{{ $option['text'] ?? $option[count($option)] }}</option>
+            @selected(in_array(($option['value'] ?? $option[0]), old(str_replace('[]', '', $name), $selected)))>{{ $option['text'] ?? $option[count($option) - 1] }}</option>
         @else
           <option
             value="{{ $option }}"
@@ -40,7 +40,7 @@
       @else
         @if(is_array($option) && !empty($option))
           <option
-            value="{{ $option['value'] ?? $option[0] }}" @selected(old($name, $selected) == ($option['value'] ?? $option[0]))>{{ $option['text'] ?? $option[count($option)] }}</option>
+            value="{{ $option['value'] ?? $option[0] }}" @selected(old($name, $selected) == ($option['value'] ?? $option[0]))>{{ $option['text'] ?? $option[count($option) - 1] }}</option>
         @else
           <option
             value="{{ $option }}" @selected(old($name, $selected) == $option)>{{ $option }}</option>
