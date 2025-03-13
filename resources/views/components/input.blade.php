@@ -6,6 +6,7 @@
     'hint' => null,
     'maxlength' => null,
     'help' => null,
+    'hasExtra' => false,
     'flatExtra' => false,
     'extraLeft' => null,
     'extraRight' => null,
