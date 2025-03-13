@@ -60,6 +60,20 @@ class LaravelTablerUiProvider extends ServiceProvider
             return $result;
         });
 
+        Blade::directive('tomselect', function () {
+            $result = '<link rel="stylesheet" href="' .
+                asset(
+                    config('tabler.assets_dir') .
+                    '/libs/tom-select/dist/css/tom-select.bootstrap5.min.css'
+                ) .
+                '"/>' . PHP_EOL;
+            $result .= '<script src="' . asset(
+                config('tabler.assets_dir') . '/libs/tom-select/dist/js/tom-select.base.min.js'
+            ) . '"></script>' . PHP_EOL;
+
+            return $result;
+        });
+
         Blade::directive('datatable', function (string $type) {
             switch (strtolower($type)) {
                 case "'css'":
