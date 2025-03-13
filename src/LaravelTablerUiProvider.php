@@ -53,20 +53,13 @@ class LaravelTablerUiProvider extends ServiceProvider
                 $result  .= '<link rel="stylesheet" href="' . $fileDir . '"/>' . PHP_EOL;
             }
 
-            $result .= '<script src="' . asset(
-                    config('tabler.assets_dir') . '/js/tabler.min.js'
-                ) . '"></script>' . PHP_EOL;
+            $result .= '<script src="' . asset(config('tabler.assets_dir') . '/js/tabler.min.js') . '"></script>' . PHP_EOL;
 
             return $result;
         });
 
         Blade::directive('tomselect', function () {
-            $result = '<link rel="stylesheet" href="' .
-                asset(
-                    config('tabler.assets_dir') .
-                    '/libs/tom-select/dist/css/tom-select.bootstrap5.min.css'
-                ) .
-                '"/>' . PHP_EOL;
+            $result = '<link rel="stylesheet" href="' . asset(config('tabler.assets_dir') . '/libs/tom-select/dist/css/tom-select.bootstrap5.min.css') . '"/>' . PHP_EOL;
             $result .= '<script src="' . asset(
                 config('tabler.assets_dir') . '/libs/tom-select/dist/js/tom-select.base.min.js'
             ) . '"></script>' . PHP_EOL;
@@ -134,15 +127,15 @@ class LaravelTablerUiProvider extends ServiceProvider
             $result = '<link rel="stylesheet" href="' .
                 asset(
                     config('tabler.assets_dir') .
-                    '/libs/ckeditor4/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css'
+                        '/libs/ckeditor4/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css'
                 ) .
                 '"/>' . PHP_EOL;
             $result .= '<script src="' . asset(
-                    config('tabler.assets_dir') . '/libs/ckeditor4/ckeditor.js'
-                ) . '"></script>' . PHP_EOL;
+                config('tabler.assets_dir') . '/libs/ckeditor4/ckeditor.js'
+            ) . '"></script>' . PHP_EOL;
             $result .= '<script src="' . asset(
-                    config('tabler.assets_dir') . '/libs/ckeditor4/ckeditor-init.js'
-                ) . '"></script>' . PHP_EOL;
+                config('tabler.assets_dir') . '/libs/ckeditor4/ckeditor-init.js'
+            ) . '"></script>' . PHP_EOL;
 
             return $result;
         });

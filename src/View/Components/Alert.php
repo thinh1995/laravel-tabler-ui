@@ -11,7 +11,6 @@ use Lucifer\LaravelTablerUi\Enums\Theme;
 
 class Alert extends Component
 {
-
     public array $classes = ['alert'];
 
     public function __construct(

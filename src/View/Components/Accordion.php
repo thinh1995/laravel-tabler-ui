@@ -10,7 +10,6 @@ use Illuminate\View\Component;
 
 class Accordion extends Component
 {
-
     public array $classes = ['accordion'];
 
     public function __construct(

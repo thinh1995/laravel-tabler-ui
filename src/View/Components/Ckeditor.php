@@ -10,7 +10,6 @@ use Illuminate\View\Component;
 
 class Ckeditor extends Component
 {
-
     /**
      * Create a new component instance.
      */

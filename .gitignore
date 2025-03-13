@@ -1,3 +1,5 @@
 /vendor/
 /.idea
-/.phpunit.cache
+/.phpunit
+/.phpcs
+.php-cs-fixer.cache

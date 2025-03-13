@@ -11,8 +11,7 @@ use Lucifer\LaravelTablerUi\Enums\Theme;
 
 class Button extends Component
 {
-
-    const VALID_STYLISHES = ['outline', 'ghost'];
+    public const VALID_STYLISHES = ['outline', 'ghost'];
 
     public function __construct(
         public bool $anchor = false,
