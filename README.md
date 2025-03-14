@@ -2,7 +2,7 @@
 [![PHP Composer](https://github.com/thinh1995/laravel-tabler-ui/actions/workflows/php.yml/badge.svg)](https://github.com/thinh1995/laravel-tabler-ui/actions/workflows/php.yml)
 
 ## Documentation, Installation, and Usage Instructions
-See the [documentation](https://wiki.mollibox.com/e/en/laravel-tabler-ui) for detailed installation and usage instructions.
+See the [documentation](https://laravel-tabler-ui.mollibox.com/) for detailed installation and usage instructions.
 
 ## What It Does
 This package is a collection of super simple but elegant Laravel blade-based UI components using [Tabler](https://tabler.io/admin-template) and vanilla Javascript. 
