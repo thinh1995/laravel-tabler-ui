@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1742376089">
-  <project timestamp="1742376089">
+<coverage generated="1742376879">
+  <project timestamp="1742376879">
     <file name="/home/runner/work/laravel-tabler-ui/laravel-tabler-ui/src/Enums/Theme.php">
       <class name="Lucifer\LaravelTablerUi\Enums\Theme" namespace="global">
         <metrics complexity="4" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="4" elements="10" coveredelements="5"/>
@@ -21,12 +21,12 @@
       <class name="Lucifer\LaravelTablerUi\LaravelTablerUiProvider" namespace="global">
         <metrics complexity="10" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="118" coveredstatements="38" elements="121" coveredelements="40"/>
       </class>
-      <line num="29" type="method" name="register" visibility="public" complexity="1" crap="1" count="47"/>
-      <line num="31" type="stmt" count="47"/>
-      <line num="34" type="method" name="boot" visibility="public" complexity="8" crap="41.77" count="47"/>
-      <line num="36" type="stmt" count="47"/>
-      <line num="37" type="stmt" count="47"/>
-      <line num="39" type="stmt" count="47"/>
+      <line num="29" type="method" name="register" visibility="public" complexity="1" crap="1" count="52"/>
+      <line num="31" type="stmt" count="52"/>
+      <line num="34" type="method" name="boot" visibility="public" complexity="8" crap="41.77" count="52"/>
+      <line num="36" type="stmt" count="52"/>
+      <line num="37" type="stmt" count="52"/>
+      <line num="39" type="stmt" count="52"/>
       <line num="40" type="stmt" count="0"/>
       <line num="41" type="stmt" count="0"/>
       <line num="42" type="stmt" count="0"/>
@@ -41,15 +41,15 @@
       <line num="53" type="stmt" count="0"/>
       <line num="56" type="stmt" count="0"/>
       <line num="58" type="stmt" count="0"/>
-      <line num="59" type="stmt" count="47"/>
-      <line num="61" type="stmt" count="47"/>
+      <line num="59" type="stmt" count="52"/>
+      <line num="61" type="stmt" count="52"/>
       <line num="62" type="stmt" count="0"/>
       <line num="63" type="stmt" count="0"/>
       <line num="64" type="stmt" count="0"/>
       <line num="65" type="stmt" count="0"/>
       <line num="67" type="stmt" count="0"/>
-      <line num="68" type="stmt" count="47"/>
-      <line num="70" type="stmt" count="47"/>
+      <line num="68" type="stmt" count="52"/>
+      <line num="70" type="stmt" count="52"/>
       <line num="71" type="stmt" count="0"/>
       <line num="72" type="stmt" count="0"/>
       <line num="73" type="stmt" count="0"/>
@@ -93,8 +93,8 @@
       <line num="117" type="stmt" count="0"/>
       <line num="120" type="stmt" count="0"/>
       <line num="123" type="stmt" count="0"/>
-      <line num="124" type="stmt" count="47"/>
-      <line num="126" type="stmt" count="47"/>
+      <line num="124" type="stmt" count="52"/>
+      <line num="126" type="stmt" count="52"/>
       <line num="127" type="stmt" count="0"/>
       <line num="128" type="stmt" count="0"/>
       <line num="129" type="stmt" count="0"/>
@@ -108,40 +108,40 @@
       <line num="137" type="stmt" count="0"/>
       <line num="138" type="stmt" count="0"/>
       <line num="140" type="stmt" count="0"/>
-      <line num="141" type="stmt" count="47"/>
-      <line num="143" type="stmt" count="47"/>
+      <line num="141" type="stmt" count="52"/>
+      <line num="143" type="stmt" count="52"/>
       <line num="144" type="stmt" count="0"/>
       <line num="145" type="stmt" count="0"/>
       <line num="146" type="stmt" count="0"/>
       <line num="147" type="stmt" count="0"/>
       <line num="149" type="stmt" count="0"/>
-      <line num="150" type="stmt" count="47"/>
-      <line num="152" type="stmt" count="47"/>
-      <line num="153" type="stmt" count="47"/>
-      <line num="154" type="stmt" count="47"/>
-      <line num="155" type="stmt" count="47"/>
-      <line num="157" type="stmt" count="47"/>
-      <line num="158" type="stmt" count="47"/>
-      <line num="159" type="stmt" count="47"/>
-      <line num="163" type="method" name="registerComponents" visibility="protected" complexity="1" crap="1" count="47"/>
-      <line num="165" type="stmt" count="47"/>
-      <line num="166" type="stmt" count="47"/>
-      <line num="167" type="stmt" count="47"/>
-      <line num="168" type="stmt" count="47"/>
-      <line num="169" type="stmt" count="47"/>
-      <line num="170" type="stmt" count="47"/>
-      <line num="171" type="stmt" count="47"/>
-      <line num="172" type="stmt" count="47"/>
-      <line num="173" type="stmt" count="47"/>
-      <line num="174" type="stmt" count="47"/>
-      <line num="175" type="stmt" count="47"/>
-      <line num="176" type="stmt" count="47"/>
-      <line num="177" type="stmt" count="47"/>
-      <line num="178" type="stmt" count="47"/>
-      <line num="179" type="stmt" count="47"/>
-      <line num="180" type="stmt" count="47"/>
-      <line num="181" type="stmt" count="47"/>
-      <line num="182" type="stmt" count="47"/>
+      <line num="150" type="stmt" count="52"/>
+      <line num="152" type="stmt" count="52"/>
+      <line num="153" type="stmt" count="52"/>
+      <line num="154" type="stmt" count="52"/>
+      <line num="155" type="stmt" count="52"/>
+      <line num="157" type="stmt" count="52"/>
+      <line num="158" type="stmt" count="52"/>
+      <line num="159" type="stmt" count="52"/>
+      <line num="163" type="method" name="registerComponents" visibility="protected" complexity="1" crap="1" count="52"/>
+      <line num="165" type="stmt" count="52"/>
+      <line num="166" type="stmt" count="52"/>
+      <line num="167" type="stmt" count="52"/>
+      <line num="168" type="stmt" count="52"/>
+      <line num="169" type="stmt" count="52"/>
+      <line num="170" type="stmt" count="52"/>
+      <line num="171" type="stmt" count="52"/>
+      <line num="172" type="stmt" count="52"/>
+      <line num="173" type="stmt" count="52"/>
+      <line num="174" type="stmt" count="52"/>
+      <line num="175" type="stmt" count="52"/>
+      <line num="176" type="stmt" count="52"/>
+      <line num="177" type="stmt" count="52"/>
+      <line num="178" type="stmt" count="52"/>
+      <line num="179" type="stmt" count="52"/>
+      <line num="180" type="stmt" count="52"/>
+      <line num="181" type="stmt" count="52"/>
+      <line num="182" type="stmt" count="52"/>
       <metrics loc="185" ncloc="185" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="118" coveredstatements="38" elements="121" coveredelements="40"/>
     </file>
     <file name="/home/runner/work/laravel-tabler-ui/laravel-tabler-ui/src/View/Components/Accordion.php">
@@ -419,35 +419,35 @@
     </file>
     <file name="/home/runner/work/laravel-tabler-ui/laravel-tabler-ui/src/View/Components/Textarea.php">
       <class name="Lucifer\LaravelTablerUi\View\Components\Textarea" namespace="global">
-        <metrics complexity="7" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="15" coveredelements="0"/>
+        <metrics complexity="7" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="9" elements="15" coveredelements="11"/>
       </class>
-      <line num="20" type="method" name="__construct" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="34" type="method" name="render" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
+      <line num="20" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="3"/>
+      <line num="26" type="stmt" count="3"/>
+      <line num="27" type="stmt" count="3"/>
+      <line num="34" type="method" name="render" visibility="public" complexity="3" crap="3" count="3"/>
+      <line num="36" type="stmt" count="3"/>
+      <line num="37" type="stmt" count="3"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="2"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="3"/>
       <line num="47" type="method" name="isRounded" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="49" type="stmt" count="0"/>
       <line num="52" type="method" name="isFlush" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="54" type="stmt" count="0"/>
-      <metrics loc="57" ncloc="51" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="15" coveredelements="0"/>
+      <metrics loc="57" ncloc="51" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="9" elements="15" coveredelements="11"/>
     </file>
     <file name="/home/runner/work/laravel-tabler-ui/laravel-tabler-ui/src/View/Components/Toggle.php">
       <class name="Lucifer\LaravelTablerUi\View\Components\Toggle" namespace="global">
-        <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </class>
-      <line num="13" type="method" name="__construct" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <line num="21" type="method" name="render" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <metrics loc="26" ncloc="26" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+      <line num="13" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="16" type="stmt" count="2"/>
+      <line num="17" type="stmt" count="2"/>
+      <line num="21" type="method" name="render" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="23" type="stmt" count="2"/>
+      <metrics loc="26" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
     </file>
     <file name="/home/runner/work/laravel-tabler-ui/laravel-tabler-ui/src/View/Components/Tomselect.php">
       <class name="Lucifer\LaravelTablerUi\View\Components\Tomselect" namespace="global">
@@ -460,6 +460,6 @@
       <line num="42" type="stmt" count="0"/>
       <metrics loc="45" ncloc="39" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
     </file>
-    <metrics files="22" loc="1057" ncloc="997" classes="22" methods="50" coveredmethods="26" conditionals="0" coveredconditionals="0" statements="277" coveredstatements="144" elements="327" coveredelements="170"/>
+    <metrics files="22" loc="1057" ncloc="997" classes="22" methods="50" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="277" coveredstatements="156" elements="327" coveredelements="186"/>
   </project>
 </coverage>
