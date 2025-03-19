@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1742377226">
-  <project timestamp="1742377226">
+<coverage generated="1742378210">
+  <project timestamp="1742378210">
     <file name="/home/runner/work/laravel-tabler-ui/laravel-tabler-ui/src/Enums/Theme.php">
       <class name="Lucifer\LaravelTablerUi\Enums\Theme" namespace="global">
         <metrics complexity="4" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="4" elements="10" coveredelements="5"/>
