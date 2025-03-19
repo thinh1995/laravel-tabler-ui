@@ -12,6 +12,8 @@ class Select extends Component
 {
     public array $classes = ['form-control', 'form-select'];
 
+    public bool $invalid = false;
+
     /**
      * Create a new component instance.
      */

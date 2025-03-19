@@ -65,3 +65,4 @@ jobs:
         coverage_badge_path: 'badge-coverage.svg'
         push_badge: true
         repo_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: 'bot: Update code coverage badge'

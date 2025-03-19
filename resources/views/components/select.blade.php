@@ -1,7 +1,6 @@
 @props([
   'required' => false,
   'name' => null,
-  'value' => null,
   'label' => null,
   'hint' => null,
   'options' => [],
@@ -21,7 +20,7 @@
     <label
       @class(['form-label', 'required' => $required]) for="{{ $id }}">{{ $label }}</label>
   @endif
-  <select {{ $attributes->merge(['class' => implode(' ', $classes)]) }} id="{{ $id }}" name="{{ $name }}">
+  <select {{ $attributes->merge(['class' => implode(' ', $classes)]) }} id="{{ $id }}" name="{{ $name }}" @if($multiple) multiple="multiple" @endif>
     @if($emptyValue)
       <option value="">{{ $emptyText }}</option>
     @endif
@@ -30,11 +29,11 @@
         @if(is_array($option) && !empty($option))
           <option
             value="{{ $option['value'] ?? $option[0] }}"
-            @selected(in_array(($option['value'] ?? $option[0]), old(str_replace('[]', '', $name), $selected)))>{{ $option['text'] ?? $option[count($option) - 1] }}</option>
+            @selected(in_array(($option['value'] ?? $option[0]), old(str_replace('[]', '', $name), $selected ?? [])))>{{ $option['text'] ?? $option[count($option) - 1] }}</option>
         @else
           <option
             value="{{ $option }}"
-            @selected(in_array($option, old(str_replace('[]', '', $name), $selected)))>{{ $option }}</option>
+            @selected(in_array($option, old(str_replace('[]', '', $name), $selected ?? [])))>{{ $option }}</option>
         @endif
       @else
         @if(is_array($option) && !empty($option))
