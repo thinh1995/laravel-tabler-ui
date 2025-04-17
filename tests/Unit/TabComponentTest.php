@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Lucifer\LaravelTablerUi\Tests\Unit;
+namespace Thinhnx\LaravelTablerUI\Tests\Unit;
 
-use Lucifer\LaravelTablerUi\Tests\TestCase;
+use Thinhnx\LaravelTablerUI\Tests\TestCase;
 
 class TabComponentTest extends TestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Lucifer\LaravelTablerUi\Tests;
+namespace Thinhnx\LaravelTablerUI\Tests;
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
-use Lucifer\LaravelTablerUi\LaravelTablerUiProvider;
+use Thinhnx\LaravelTablerUI\LaravelTablerUIProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class TestCase extends OrchestraTestCase
@@ -15,7 +15,7 @@ abstract class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app): array
     {
         return [
-            LaravelTablerUiProvider::class,
+            LaravelTablerUIProvider::class,
         ];
     }
 }

@@ -2,29 +2,29 @@
 
 declare(strict_types=1);
 
-namespace Lucifer\LaravelTablerUi;
+namespace Thinhnx\LaravelTablerUI;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Lucifer\LaravelTablerUi\View\Components\Accordion;
-use Lucifer\LaravelTablerUi\View\Components\Alert;
-use Lucifer\LaravelTablerUi\View\Components\Badge;
-use Lucifer\LaravelTablerUi\View\Components\Button;
-use Lucifer\LaravelTablerUi\View\Components\Card;
-use Lucifer\LaravelTablerUi\View\Components\Checkbox;
-use Lucifer\LaravelTablerUi\View\Components\Ckeditor;
-use Lucifer\LaravelTablerUi\View\Components\Datatable;
-use Lucifer\LaravelTablerUi\View\Components\Form;
-use Lucifer\LaravelTablerUi\View\Components\Icon;
-use Lucifer\LaravelTablerUi\View\Components\Input;
-use Lucifer\LaravelTablerUi\View\Components\Page;
-use Lucifer\LaravelTablerUi\View\Components\Radio;
-use Lucifer\LaravelTablerUi\View\Components\Select;
-use Lucifer\LaravelTablerUi\View\Components\Tab;
-use Lucifer\LaravelTablerUi\View\Components\Textarea;
-use Lucifer\LaravelTablerUi\View\Components\Toggle;
+use Thinhnx\LaravelTablerUI\View\Components\Accordion;
+use Thinhnx\LaravelTablerUI\View\Components\Alert;
+use Thinhnx\LaravelTablerUI\View\Components\Badge;
+use Thinhnx\LaravelTablerUI\View\Components\Button;
+use Thinhnx\LaravelTablerUI\View\Components\Card;
+use Thinhnx\LaravelTablerUI\View\Components\Checkbox;
+use Thinhnx\LaravelTablerUI\View\Components\Ckeditor;
+use Thinhnx\LaravelTablerUI\View\Components\Datatable;
+use Thinhnx\LaravelTablerUI\View\Components\Form;
+use Thinhnx\LaravelTablerUI\View\Components\Icon;
+use Thinhnx\LaravelTablerUI\View\Components\Input;
+use Thinhnx\LaravelTablerUI\View\Components\Page;
+use Thinhnx\LaravelTablerUI\View\Components\Radio;
+use Thinhnx\LaravelTablerUI\View\Components\Select;
+use Thinhnx\LaravelTablerUI\View\Components\Tab;
+use Thinhnx\LaravelTablerUI\View\Components\Textarea;
+use Thinhnx\LaravelTablerUI\View\Components\Toggle;
 
-class LaravelTablerUiProvider extends ServiceProvider
+class LaravelTablerUIProvider extends ServiceProvider
 {
     public function register(): void
     {

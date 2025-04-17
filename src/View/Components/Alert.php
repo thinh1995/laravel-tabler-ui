@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Lucifer\LaravelTablerUi\View\Components;
+namespace Thinhnx\LaravelTablerUI\View\Components;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Lucifer\LaravelTablerUi\Enums\Theme;
+use Thinhnx\LaravelTablerUI\Enums\Theme;
 
 class Alert extends Component
 {

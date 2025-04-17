@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lucifer\LaravelTablerUi\View\Components\Tab;
+namespace Thinhnx\LaravelTablerUI\View\Components\Tab;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;

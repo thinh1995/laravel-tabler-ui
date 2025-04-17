@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lucifer\LaravelTablerUi\Enums;
+namespace Thinhnx\LaravelTablerUI\Enums;
 
 enum Theme: string
 {

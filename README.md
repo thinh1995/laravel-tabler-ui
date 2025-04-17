@@ -1,7 +1,9 @@
 # Laravel Tabler UI
 [![Tests](https://github.com/thinh1995/laravel-tabler-ui/actions/workflows/php.yml/badge.svg)](https://github.com/thinh1995/laravel-tabler-ui/actions/workflows/php.yml)
-[![Test Coverage](https://github.com/thinh1995/laravel-tabler-ui/blob/master/badge-coverage.svg)](https://github.com/thinh1995/laravel-tabler-ui/blob/master/clover.xml)
+[![Test Coverage](https://github.com/thinh1995/laravel-tabler-ui/blob/master/tests/_reports/badge-coverage.svg)](https://github.com/thinh1995/laravel-tabler-ui/blob/master/tests/_reports/clover.xml)
+[![License](https://img.shields.io/badge/license-mit-blue.svg)](https://github.com/thinh1995/laravel-page-builder/blob/master/LICENSE)
 
+---
 
 ## Documentation, Installation, and Usage Instructions
 See the [documentation](https://laravel-tabler-ui.mollibox.com/) for detailed installation and usage instructions.
@@ -19,24 +21,24 @@ Laravel Tabler UI components are purely Laravel blade components sprinkled with 
 At the root of your Laravel project, type the following composer command in your terminal to pull in the package.
 
 ```bash
-composer require lucifer293/laravel-tabler-ui
+composer require thinhnx/laravel-tabler-ui
 ```
 
 Next you need to publish the package's public assets by running the command below, still at the root of your Laravel project. This will create a `tabler` directory in your public directory.
 
 ```bash
-php artisan vendor:publish --provider="Lucifer\LaravelTablerUi\LaravelTablerUiProvider" --force
+php artisan vendor:publish --provider="Thinhnx\LaravelTablerUI\LaravelTablerUIProvider" --force
 ```
 
 ## Updating
 Running composer update at the root of your project will pull in the latest version of Laravel Tabler UI depending on how your dependencies are defined in composer.json.
 
 ```bash
-composer update lucifer293/laravel-tabler-ui
+composer update thinhnx/laravel-tabler-ui
 ```
 
 It is important to republish the assets and config after every update to pull in any new css and js changes. Run the command below to publish the Laravel Tabler UI assets and config.
 
 ```bash
-php artisan vendor:publish --provider="Lucifer\LaravelTablerUi\LaravelTablerUiProvider" --force
+php artisan vendor:publish --provider="Thinhnx\LaravelTablerUi\LaravelTablerUIProvider" --force
 ```
