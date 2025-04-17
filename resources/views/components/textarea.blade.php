@@ -23,8 +23,8 @@
             class="form-label-description">({{ mb_strlen($value, 'UTF-8') }}/{{ $maxlength }})</span>
     @endif
   </label>
-  <textarea {{ $attributes->merge(['class' => implode(' ', $classes)]) }} id="{{ $id }}" name="{{ $name }}"
-            rows="{{ $rows }}"
+  <textarea {{ $attributes->merge(['class' => implode(' ', $classes)]) }} id="{{ $id }}"
+            @if($name) name="{{ $name }}" @endif rows="{{ $rows }}"
             @if(!is_null($maxlength))
               maxlength="{{ $maxlength }}"
             onblur="{document.getElementById('{{ $id }}_maxlength').innerHTML='(' + document.getElementById('{{ $id }}').value.length + '/{{ $maxlength }})'}"

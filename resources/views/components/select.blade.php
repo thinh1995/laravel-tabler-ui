@@ -20,7 +20,9 @@
     <label
       @class(['form-label', 'required' => $required]) for="{{ $id }}">{{ $label }}</label>
   @endif
-  <select {{ $attributes->merge(['class' => implode(' ', $classes)]) }} id="{{ $id }}" name="{{ $name }}" @if($multiple) multiple="multiple" @endif>
+  <select {{ $attributes->merge(['class' => implode(' ', $classes)]) }} id="{{ $id }}"
+          @if($name) name="{{ $name }}" @endif
+          @if($multiple) multiple="multiple" @endif>
     @if($emptyValue)
       <option value="">{{ $emptyText }}</option>
     @endif

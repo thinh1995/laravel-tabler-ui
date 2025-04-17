@@ -1,32 +1,33 @@
 <div class="mb-3">
-	<label
-		@class(['form-label', 'required' => $isRequired]) for="{{ $id }}">{{ $label }}</label>
-	<select placeholder="{{ $placeholder }}" class="form-control form-select" id="{{ $id }}" name="{{ $name }}"
-	        @if($multiple) multiple @endif autocomplete="off">
-		@if($hasEmptyValue)
-			<option value=""></option>
-		@endif
-		@foreach($options as $option)
-			<option value="{{ $option[$valueField] }}"
-			        @selected(old($name, $selected) == $option[$valueField])
-			        data-src="{{ \Illuminate\Support\Arr::get($option, $imageField) }}">{{ $option[$textField] }}</option>
-		@endforeach
-	</select>
+  <label
+    @class(['form-label', 'required' => $isRequired]) for="{{ $id }}">{{ $label }}</label>
+  <select placeholder="{{ $placeholder }}" class="form-control form-select" id="{{ $id }}"
+          @if($name) name="{{ $name }}" @endif @if($multiple) multiple @endif autocomplete="off">
+    @if($hasEmptyValue)
+      <option value=""></option>
+    @endif
+    @foreach($options as $option)
+      <option value="{{ $option[$valueField] }}"
+              @selected(old($name, $selected) == $option[$valueField])
+              data-src="{{ \Illuminate\Support\Arr::get($option, $imageField) }}">{{ $option[$textField] }}</option>
+    @endforeach
+  </select>
 </div>
 
 @pushOnce('script')
-	<script src="{{ assetVersion('backend/dist/libs/tom-select/dist/js/tom-select.complete.min.js') }}"></script>
-	<style>
+  <script src="{{ assetVersion('backend/dist/libs/tom-select/dist/js/tom-select.complete.min.js') }}"></script>
+  <style>
       .ts-dropdown.single {
           z-index: 9999;
       }
-	</style>
+  </style>
 @endPushOnce
 
 @push('script')
-	<script>
+  <script>
     $(document).ready(function () {
-      let selected_{{ $id }} = @json($selected) ?? [];
+      let selected_{{ $id }} = @json($selected) ??
+      [];
       let option_{{ $id }} = [];
       if (selected_{{ $id }}.length) {
         option_{{ $id }} = selected_{{ $id }}.map(function (item) {
@@ -39,10 +40,10 @@
         persist: false,
         preload: true,
         create: {{ (int)$create }},
-				@if($hasEmptyValue)
+        @if($hasEmptyValue)
         allowEmptyOption: true,
-				@endif
-					@if(!is_null($remoteUrl))
+        @endif
+          @if(!is_null($remoteUrl))
         options: option_{{ $id }},
         valueField: 'name',
         labelField: 'name',
@@ -64,8 +65,8 @@
             callback();
           });
         },
-				@endif
-					@if($hasImage)
+        @endif
+          @if($hasImage)
         onItemAdd: {{ $onItemAdd }},
         render: {
           option: function (data, escape) {
@@ -84,8 +85,8 @@
             return '<div></div>';
           }
         }
-				@endif
+        @endif
       });
     });
-	</script>
+  </script>
 @endpush

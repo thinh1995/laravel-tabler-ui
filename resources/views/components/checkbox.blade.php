@@ -8,7 +8,7 @@
 
 <label class="form-check @if($inline) form-check-inline @endif">
   <input type="checkbox" {{ $attributes->merge(['class' => 'form-check-input']) }} id="{{ $id }}"
-         name="{{ $name }}" value="{{ $value }}" @checked(old(str_replace('[]', '', $name), false))>
+         @if($name) name="{{ $name }}" @endif value="{{ $value }}" @checked(old(str_replace('[]', '', $name), false))>
   @if(!is_null($label))
     <span class="form-check-label">{{ $label }}</span>
   @endif

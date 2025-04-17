@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Tests
 
 on:
   push:
@@ -28,10 +28,8 @@ jobs:
         with:
           sarif_file: results.sarif
 
-  test-and-check-style:
+  test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -58,11 +56,3 @@ jobs:
       env:
         XDEBUG_MODE: coverage
       run: vendor/bin/pest --coverage-clover clover.xml
-
-    - name: Generate test coverage badge
-      uses: timkrase/phpunit-coverage-badge@v1.2.0
-      with:
-        coverage_badge_path: 'badge-coverage.svg'
-        push_badge: true
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        commit_message: 'bot: Update code coverage badge'

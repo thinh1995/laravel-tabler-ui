@@ -6,10 +6,10 @@
 <div>
   <div class="dropzone" id="remove_link_{{ $key }}">
     <div class="fallback">
-      <input name="{{ $name . '_' . $key }}" type="file" @if($multiple) multiple @endif/>
+      <input @if($name) name="{{ $name . '_' . $key }}" @endif type="file" @if($multiple) multiple @endif/>
     </div>
   </div>
-  <input type="file" name="{{ $name }}" class="d-none" @if($multiple) multiple @endif/>
+  <input type="file" @if($name) name="{{ $name }}" @endif class="d-none" @if($multiple) multiple @endif/>
 
   @if($multiple)
     @foreach($files as $index => $file)

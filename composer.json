@@ -1,5 +1,5 @@
 {
-  "name": "lucifer293/laravel-tabler-ui",
+  "name": "thinhnx/laravel-tabler-ui",
   "description": "Tabler UI Blade for Laravel",
   "license": "MIT",
   "autoload": {
@@ -20,12 +20,13 @@
   ],
   "require": {
     "php": "^8.1",
-    "illuminate/support": "^v10.48.28"
+    "laravel/framework": "^v10|^v11|^v12"
   },
   "require-dev": {
     "orchestra/testbench": "^8.0",
     "squizlabs/php_codesniffer": "^3.11",
-    "pestphp/pest": "^2.36"
+    "pestphp/pest": "^2.36",
+    "jaschilz/php-coverage-badger": "^2.0"
   },
   "extra": {
     "laravel": {
@@ -36,7 +37,8 @@
   },
   "scripts": {
     "test": "pest",
-    "phpcs": "phpcs"
+    "phpcs": "phpcs",
+    "badge-coverage": "XDEBUG_MODE=coverage phpunit && php-coverage-badger ./clover.xml ./badge-coverage.svg"
   },
   "config": {
     "allow-plugins": {
