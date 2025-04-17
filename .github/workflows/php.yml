@@ -55,4 +55,4 @@ jobs:
     - name: Run tests
       env:
         XDEBUG_MODE: coverage
-      run: vendor/bin/pest --coverage-clover clover.xml
+      run: ./vendor/bin/phpunit
