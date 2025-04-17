@@ -20,6 +20,6 @@ class Checkbox extends Component
 
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.checkbox');
+        return view('tabler::components.checkbox');
     }
 }

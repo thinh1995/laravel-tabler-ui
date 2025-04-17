@@ -17,6 +17,7 @@ class Dropzone extends Component
     public function __construct(
         public array|SplFileInfo|null $files = [],
         public string|null $key = null,
+        public string|null $name = null,
     ) {
         $this->key = Str::random(8);
 
@@ -35,6 +36,6 @@ class Dropzone extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.dropzone');
+        return view('tabler::components.dropzone');
     }
 }

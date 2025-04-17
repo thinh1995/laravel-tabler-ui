@@ -39,6 +39,6 @@ class Tomselect extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.tomselect');
+        return view('tabler::components.tomselect');
     }
 }

@@ -7,7 +7,6 @@
     </rule>
 
     <file>src</file>
-    <file>config</file>
     <file>tests</file>
 
     <exclude-pattern>*.blade.php</exclude-pattern>

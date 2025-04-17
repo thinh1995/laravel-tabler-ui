@@ -39,7 +39,7 @@ class Select extends Component
                 $this->classes[] = 'form-control-flush';
         }
 
-        return view(config('tabler.namespace') . '::components.select');
+        return view('tabler::components.select');
     }
 
     public function isFloat(): bool

@@ -48,6 +48,6 @@ class Accordion extends Component
             $this->classes[] = 'accordion-plus';
         }
 
-        return view(config('tabler.namespace') . '::components.accordion');
+        return view('tabler::components.accordion');
     }
 }

@@ -20,6 +20,6 @@ class Radio extends Component
 
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.radio');
+        return view('tabler::components.radio');
     }
 }

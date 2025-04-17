@@ -41,7 +41,7 @@ class Textarea extends Component
                 $this->classes[] = 'form-control-flush';
         }
 
-        return view(config('tabler.namespace') . '::components.textarea');
+        return view('tabler::components.textarea');
     }
 
     public function isRounded(): bool

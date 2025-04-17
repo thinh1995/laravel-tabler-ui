@@ -20,6 +20,6 @@ class Toggle extends Component
 
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.toggle');
+        return view('tabler::components.toggle');
     }
 }

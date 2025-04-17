@@ -28,134 +28,17 @@ class LaravelTablerUIProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/tabler.php', 'tabler');
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', config('tabler.namespace'));
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'tabler');
         $this->registerComponents();
-
-        Blade::directive('tabler', function () {
-            $cssFileNames = [
-                'tabler.min.css',
-                'tabler-flags.min.css',
-                'tabler-socials.min.css',
-                'tabler-payments.min.css',
-                'tabler-vendors.min.css',
-                'tabler-marketing.min.css',
-            ];
-
-            $result = '<!-- Tabler UI Stylesheets -->' . PHP_EOL;
-
-            foreach ($cssFileNames as $fileName) {
-                $fileDir = asset(config('tabler.assets_dir') . "/css/{$fileName}");
-                $result  .= '<link rel="stylesheet" href="' . $fileDir . '"/>' . PHP_EOL;
-            }
-
-            $result .= '<script src="' . asset(config('tabler.assets_dir') . '/js/tabler.min.js') . '"></script>' . PHP_EOL;
-
-            return $result;
-        });
-
-        Blade::directive('tomselect', function () {
-            $result = '<link rel="stylesheet" href="' . asset(config('tabler.assets_dir') . '/libs/tom-select/dist/css/tom-select.bootstrap5.min.css') . '"/>' . PHP_EOL;
-            $result .= '<script src="' . asset(
-                config('tabler.assets_dir') . '/libs/tom-select/dist/js/tom-select.base.min.js'
-            ) . '"></script>' . PHP_EOL;
-
-            return $result;
-        });
-
-        Blade::directive('datatable', function (string $type) {
-            switch (strtolower($type)) {
-                case "'css'":
-                    $fileNames = [
-                        'dataTables.bootstrap5.min.css',
-                        'buttons.bootstrap5.min.css',
-                        'select.bootstrap5.min.css',
-                        'searchBuilder.bootstrap5.min.css',
-                        'fixedHeader.bootstrap5.min.css',
-                        'dataTables.checkboxes.css'
-                    ];
-
-                    $result = '<!-- Datatable Stylesheets -->' . PHP_EOL;
-
-                    foreach ($fileNames as $fileName) {
-                        $fileDir = asset(config('tabler.assets_dir') . "/libs/datatables/css/{$fileName}");
-                        $result  .= '<link rel="stylesheet" href="' . $fileDir . '"/>' . PHP_EOL;
-                    }
-                    break;
-                case "'js'":
-                    $fileNames = [
-                        'dataTables.min.js',
-                        'dataTables.bootstrap5.min.js',
-                        'dataTables.buttons.min.js',
-                        'buttons.bootstrap5.min.js',
-                        'jszip.min.js',
-                        'buttons.colVis.min.js',
-                        'pdfmake.min.js',
-                        'vfs_fonts.js',
-                        'buttons.print.min.js',
-                        'buttons.html5.min.js',
-                        'dataTables.select.min.js',
-                        'select.bootstrap5.min.js',
-                        'dataTables.searchBuilder.min.js',
-                        'searchBuilder.bootstrap5.min.js',
-                        'dataTables.fixedHeader.min.js',
-                        'fixedHeader.bootstrap5.min.js',
-                        'dataTables.checkboxes.min.js',
-                        'datatable-init.js',
-                    ];
-
-                    $result = '<!-- Datatable Scripts -->' . PHP_EOL;
-
-                    foreach ($fileNames as $fileName) {
-                        $fileDir = asset(config('tabler.assets_dir') . "/libs/datatables/js/{$fileName}");
-                        $result  .= '<script src="' . $fileDir . '"></script>' . PHP_EOL;
-                    }
-                    break;
-
-                default:
-                    $result = null;
-            }
-
-            return $result;
-        });
-
-        Blade::directive('ckeditor4', function () {
-            $result = '<link rel="stylesheet" href="' .
-                asset(
-                    config('tabler.assets_dir') .
-                        '/libs/ckeditor4/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css'
-                ) .
-                '"/>' . PHP_EOL;
-            $result .= '<script src="' . asset(
-                config('tabler.assets_dir') . '/libs/ckeditor4/ckeditor.js'
-            ) . '"></script>' . PHP_EOL;
-            $result .= '<script src="' . asset(
-                config('tabler.assets_dir') . '/libs/ckeditor4/ckeditor-init.js'
-            ) . '"></script>' . PHP_EOL;
-
-            return $result;
-        });
-
-        Blade::directive('dropzone', function () {
-            $result = '<link rel="stylesheet" href="' .
-                asset(config('tabler.assets_dir') . 'dropzone/dist/dropzone.css') . '"/>' . PHP_EOL;
-            $result .= '<script src="' .
-                asset(config('tabler.assets_dir') . 'dropzone/dist/dropzone-min.js') . '"></script>' . PHP_EOL;
-
-            return $result;
-        });
+        $this->registerDirectives();
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/tabler.php' => config_path('tabler.php'),
-            ], 'config');
-
-            $this->publishes([
-                __DIR__ . '/../resources/assets' => public_path('tabler'),
+                __DIR__ . '/../resources/assets' => public_path('/packages/thinhnx/tabler'),
             ], 'assets');
         }
     }
@@ -180,5 +63,146 @@ class LaravelTablerUIProvider extends ServiceProvider
         Blade::component('tabler-icon', Icon::class);
         Blade::component('tabler-ckeditor', Ckeditor::class);
         Blade::component('tabler-datatable', Datatable::class);
+    }
+
+    protected function registerDirectives(): void
+    {
+        Blade::directive('tabler', function () {
+            $cssFileNames = [
+                'tabler.min.css',
+                'tabler-flags.min.css',
+                'tabler-socials.min.css',
+                'tabler-payments.min.css',
+                'tabler-vendors.min.css',
+                'tabler-marketing.min.css',
+            ];
+
+            $result = '<!-- Tabler UI Stylesheets -->' . PHP_EOL;
+
+            foreach ($cssFileNames as $fileName) {
+                $result .= sprintf(
+                    '<link rel="stylesheet" href="%s"/>' . PHP_EOL,
+                    asset("/packages/thinhnx/tabler/css/{$fileName}")
+                );
+            }
+
+            $result .= sprintf(
+                '<script src="%s"></script>' . PHP_EOL,
+                asset('/packages/thinhnx/tabler/js/tabler.min.js')
+            );
+
+            return $result;
+        });
+
+        Blade::directive('tomselect', function () {
+            $result = sprintf(
+                '<link rel="stylesheet" href="%s"/>' . PHP_EOL,
+                asset('/packages/thinhnx/tabler/libs/tom-select/dist/css/tom-select.bootstrap5.min.css')
+            );
+
+            $result .= sprintf(
+                '<script src="%s"></script>' . PHP_EOL,
+                asset('/packages/thinhnx/tabler/libs/tom-select/dist/js/tom-select.base.min.js')
+            );
+
+            return $result;
+        });
+
+        Blade::directive('datatable', function (string $type) {
+            switch (strtolower($type)) {
+                case "'css'":
+                    $result = '<!-- Datatable Stylesheets -->' . PHP_EOL;
+
+                    $fileNames = [
+                        'dataTables.bootstrap5.min.css',
+                        'buttons.bootstrap5.min.css',
+                        'select.bootstrap5.min.css',
+                        'searchBuilder.bootstrap5.min.css',
+                        'fixedHeader.bootstrap5.min.css',
+                        'dataTables.checkboxes.css'
+                    ];
+
+                    foreach ($fileNames as $fileName) {
+                        $result .= sprintf(
+                            '<link rel="stylesheet" href="%s"/>' . PHP_EOL,
+                            asset("/packages/thinhnx/tabler/libs/datatables/css/{$fileName}")
+                        );
+                    }
+                    break;
+                case "'js'":
+                    $result = '<!-- Datatable Scripts -->' . PHP_EOL;
+
+                    $fileNames = [
+                        'dataTables.min.js',
+                        'dataTables.bootstrap5.min.js',
+                        'dataTables.buttons.min.js',
+                        'buttons.bootstrap5.min.js',
+                        'jszip.min.js',
+                        'buttons.colVis.min.js',
+                        'pdfmake.min.js',
+                        'vfs_fonts.js',
+                        'buttons.print.min.js',
+                        'buttons.html5.min.js',
+                        'dataTables.select.min.js',
+                        'select.bootstrap5.min.js',
+                        'dataTables.searchBuilder.min.js',
+                        'searchBuilder.bootstrap5.min.js',
+                        'dataTables.fixedHeader.min.js',
+                        'fixedHeader.bootstrap5.min.js',
+                        'dataTables.checkboxes.min.js',
+                        'datatable-init.js',
+                    ];
+
+                    foreach ($fileNames as $fileName) {
+                        $result .= sprintf(
+                            '<script src="%s"></script>' . PHP_EOL,
+                            asset("/libs/datatables/js/{$fileName}")
+                        );
+                    }
+                    break;
+
+                default:
+                    $result = null;
+            }
+
+            return $result;
+        });
+
+        Blade::directive('ckeditor4', function () {
+            $result = '<!-- CKEditor 4 -->' . PHP_EOL;
+            $result .= sprintf(
+                '<link rel="stylesheet" href="%s"/>' . PHP_EOL,
+                asset(
+                    '/packages/thinhnx/tabler/libs/ckeditor4/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css'
+                )
+            );
+            $result .= sprintf(
+                '<script src="%s"></script>' . PHP_EOL,
+                asset('/packages/thinhnx/tabler/libs/ckeditor4/ckeditor.js')
+            );
+
+            $result .= sprintf(
+                '<script src="%s"></script>' . PHP_EOL,
+                asset('/packages/thinhnx/tabler/libs/ckeditor4/ckeditor-init.js')
+            );
+
+            return $result;
+        });
+
+        Blade::directive('dropzone', function () {
+            $result = '<!-- Dropzone -->' . PHP_EOL;
+            $result .= sprintf(
+                '<link rel="stylesheet" href="%s"/>' . PHP_EOL,
+                asset(
+                    '/packages/thinhnx/tabler/libs/dropzone/dist/dropzone.css'
+                )
+            );
+            $result .= sprintf(
+                '<script src="%s"></script>' . PHP_EOL,
+                asset('/packages/thinhnx/tabler/libs/dropzone/dist/dropzone-min.js')
+            );
+
+            return $result;
+        });
     }
 }

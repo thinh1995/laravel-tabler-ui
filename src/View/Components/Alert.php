@@ -40,6 +40,6 @@ class Alert extends Component
             $this->classes[] = 'alert-dismissible';
         }
 
-        return view(config('tabler.namespace') . '::components.alert');
+        return view('tabler::components.alert');
     }
 }

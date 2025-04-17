@@ -27,6 +27,6 @@ class Ckeditor extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.ckeditor');
+        return view('tabler::components.ckeditor');
     }
 }

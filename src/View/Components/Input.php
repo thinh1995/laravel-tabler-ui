@@ -39,7 +39,7 @@ class Input extends Component
                 $this->classes[] = 'form-control-flush';
         }
 
-        return view(config('tabler.namespace') . '::components.input');
+        return view('tabler::components.input');
     }
 
     public function isRounded(): bool

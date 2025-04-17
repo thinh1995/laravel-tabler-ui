@@ -11,6 +11,6 @@ class Page extends Component
 {
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.page');
+        return view('tabler::components.page');
     }
 }

@@ -26,6 +26,6 @@ class Form extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.form');
+        return view('tabler::components.form');
     }
 }

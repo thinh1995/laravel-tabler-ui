@@ -26,6 +26,6 @@ class Datatable extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.datatable');
+        return view('tabler::components.datatable');
     }
 }

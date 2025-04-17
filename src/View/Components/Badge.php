@@ -65,6 +65,6 @@ class Badge extends Component
             $this->classes[] = 'badge-blink';
         }
 
-        return view(config('tabler.namespace') . '::components.badge');
+        return view('tabler::components.badge');
     }
 }

@@ -14,6 +14,6 @@ class Pane extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.tab.pane');
+        return view('tabler::components.tab.pane');
     }
 }

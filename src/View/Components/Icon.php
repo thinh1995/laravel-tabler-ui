@@ -9,8 +9,6 @@ use Illuminate\View\Component;
 
 class Icon extends Component
 {
-    public string $dir = '';
-
     public function __construct(
         public string $stylish = 'normal'
     ) {
@@ -18,8 +16,6 @@ class Icon extends Component
 
     public function render(): View
     {
-        $this->dir = config('tabler.assets_dir') . '/icons/';
-
-        return view(config('tabler.namespace') . '::components.icon');
+        return view('tabler::components.icon');
     }
 }

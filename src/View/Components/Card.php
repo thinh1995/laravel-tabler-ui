@@ -61,6 +61,6 @@ class Card extends Component
             }
         }
 
-        return view(config('tabler.namespace') . '::components.card');
+        return view('tabler::components.card');
     }
 }

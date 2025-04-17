@@ -2,6 +2,7 @@
     'name' => null,
     'type' => 'outline',
     'class' => '',
+    'dir' => '/packages/thinhnx/tabler/icons',
 ])
 
 @if(!empty($name))

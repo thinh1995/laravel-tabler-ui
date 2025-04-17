@@ -29,6 +29,6 @@ class Tab extends Component
      */
     public function render(): View
     {
-        return view(config('tabler.namespace') . '::components.tab');
+        return view('tabler::components.tab');
     }
 }

@@ -59,6 +59,6 @@ class Button extends Component
             }
         }
 
-        return view(config('tabler.namespace') . '::components.button');
+        return view('tabler::components.button');
     }
 }
