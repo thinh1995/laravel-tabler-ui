@@ -40,6 +40,10 @@ class LaravelTablerUIProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../resources/assets' => public_path('/packages/thinhnx/tabler'),
             ], 'assets');
+
+            $this->publishes([
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/tabler'),
+            ], 'views');
         }
     }
 
@@ -156,7 +160,7 @@ class LaravelTablerUIProvider extends ServiceProvider
                     foreach ($fileNames as $fileName) {
                         $result .= sprintf(
                             '<script src="%s"></script>' . PHP_EOL,
-                            asset("/libs/datatables/js/{$fileName}")
+                            asset("/packages/thinhnx/tabler/libs/datatables/js/{$fileName}")
                         );
                     }
                     break;
