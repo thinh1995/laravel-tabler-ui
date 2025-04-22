@@ -29,7 +29,7 @@
               maxlength="{{ $maxlength }}"
             onblur="{document.getElementById('{{ $id }}_maxlength').innerHTML='(' + document.getElementById('{{ $id }}').value.length + '/{{ $maxlength }})'}"
             @endif
-  >{{ is_null($name) ? '' : old($name, $value) }}</textarea>
+  >{{ $name ? old($name, $value) : $value }}</textarea>
 
   @if(!$invalid)
     <small class="form-hint mt-1">{{ $hint }}</small>

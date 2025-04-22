@@ -44,7 +44,7 @@
         @endif
         <input {{ $attributes->merge(['class' => implode(' ', $classes), 'type' => 'text']) }}
                id="{{ $id }}" @if($name) name="{{ $name }}" @endif
-               value="{{ is_null($name) ? '' : old($name, $value) }}"
+               value="{{ $name ? old($name, $value) : $value }}"
                @if (!is_null($maxlength)) maxlength="{{ $maxlength }}"
                onblur="{document.getElementById('{{ $id }}_maxlength').innerHTML='(' + document.getElementById('{{ $id }}').value.length + '/{{ $maxlength }})'}" @endif>
         @if (!is_null($label) && $isFloat())

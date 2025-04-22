@@ -12,5 +12,5 @@
   <label @class(['form-label', 'required' => $required]) for="{{ $id }}">{{ $label }}</label>
   <textarea {{ $attributes->merge(['class' => $inline ? 'js-ckeditor' : 'js-ckeditor-inline']) }}
             id="{{ $id }}" @if($name) name="{{ $name }}" @endif
-            rows="{{ $rows }}" placeholder="{{ $placeholder }}">{{ old($name, $value) }}</textarea>
+            rows="{{ $rows }}" placeholder="{{ $placeholder }}">{{ $name ? old($name, $value) : $value }}</textarea>
 </div>
